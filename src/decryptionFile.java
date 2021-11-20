@@ -62,7 +62,7 @@ public class decryptionFile {
                     if (decipherChoice == 1) {
                         // firstQuestion() houses the algorithm for the known caesar cipher
                         System.out.println("This is the answer to the first question : " + decryptionFile.firstQuestionReDone(text));
-                        // handleMenu() handles and does the exception handling for the deepest menu
+                        // handleMenu() shows and handles, and does the exception handling for the deepest menu
                         menuChoice = decryptionFile.handleMenu();
 
                         if (menuChoice == 1) {
