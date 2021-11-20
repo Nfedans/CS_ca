@@ -65,16 +65,15 @@ public class decryptionFile {
                         // handleMenu() shows and handles, and does the exception handling for the deepest menu
                         menuChoice = decryptionFile.handleMenu();
 
-                        if (menuChoice == 1) {
-                            // will simply give you the 2 options to view the deciphered code
-                        } else if (menuChoice == 2) {
+                       if (menuChoice == 2) {
                             // will take you back to the start of the app
                             sentinel = true;
-                        } else {
+                        } else if(menuChoice == 3) {
                             // will quit the app and end the program
                             sentinel = true;
                             quit = true;
                         }
+                       // If 1 is clicked, the loop will simply repeat and you are presented with the 2 options
 
                     }
                     // if you choose to view the answer to the second question you will enter here
@@ -83,13 +82,14 @@ public class decryptionFile {
                         System.out.println("\nThis is the answer to the second question : " + decryptionFile.secondQuestion(text2));
                         menuChoice = decryptionFile.handleMenu();
 
-                        if (menuChoice == 1) {
-                        } else if (menuChoice == 2) {
+                        if (menuChoice == 2) {
                             sentinel = true;
-                        } else {
+                        } else if (menuChoice == 3) {
                             sentinel = true;
                             quit = true;
                         }
+                        // If 1 is clicked, the loop will simply repeat and you are presented with the 2 options
+
 
                     }
                 }
@@ -102,11 +102,11 @@ public class decryptionFile {
 
         }
     }
-    public static int linearSearch(String[] arr, String key)
+    public static int linearSearch(String[] alphabetArr, String key)
     {
         // This method returns the index of a given letter, from alphabet array
-        for(int i=0;i<arr.length;i++){
-            if(arr[i].equals(key)){
+        for(int i=0;i<alphabetArr.length;i++){
+            if(alphabetArr[i].equals(key)){
                 return i;
             }
         }
